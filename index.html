@@ -1,40 +1,74 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/binarymistPresent.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+  </head>
+  <body>
+    <div class="reveal">
+    <!-- Details on top bars: https://github.com/hakimel/reveal.js/issues/806 -->
+      <div class="topbar">
+        <image class="logo" src="img/logo.png">
+      </div>
+      <div class="slides">
+        <section data-markdown="slides.md" data-separator="^\n----  ----\n$" data-separator-vertical="^\n----\n$">
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="node_modules/reveal.js-menu/menu.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealZoom ],
+        
+        // plugin menu, cf. https://github.com/denehyg/reveal.js-menu#configuration
+        menu: {
+          side: 'left',
+          numbers: false,
+          titleSelector: 'h1, h2, h3, h4, h5, h6',
+          hideMissingTitles: false,
+          markers: false,
+          custom: false,
+          themes: true,
+          themes: [
+            { name: 'Black', theme: 'dist/theme/black.css' },
+            { name: 'White', theme: 'dist/theme/white.css' },
+            { name: 'League', theme: 'dist/theme/league.css' },
+            { name: 'Sky', theme: 'dist/theme/sky.css' },
+            { name: 'Beige', theme: 'dist/theme/beige.css' },
+            { name: 'Simple', theme: 'dist/theme/simple.css' },
+            { name: 'Serif', theme: 'dist/theme/serif.css' },
+            { name: 'Blood', theme: 'dist/theme/blood.css' },
+            { name: 'Night', theme: 'dist/theme/night.css' },
+            { name: 'Moon', theme: 'dist/theme/moon.css' },
+            { name: 'Solarized', theme: 'dist/theme/solarized.css' }
+          ],
+          transitions: true,
+          openButton: true,
+          openSlideNumber: true,
+          keyboard: true
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,45 @@
+
+.reveal div.topbar .logo {
+  top: 0.3em;
+  right: 0.4em;
+  position: absolute;
+  margin: 0
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #9b6bcc;
+}
+
+.reveal a:hover {
+  color: #53237f;
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #9b6bcc; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  color: #9b6bcc;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+
+.reveal section img {
+  background: transparent;
+}
+
+.reveal a:hover img {
+  border-color: #53237f;
+  background: rgba(255, 255, 255, 0.2);
+}

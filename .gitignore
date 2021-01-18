@@ -10,3 +10,8 @@ tmp/**
 node_modules/
 .sass-cache
 dist/*.map
+
+proj-css
+proj-img
+proj-media
+slides.md
